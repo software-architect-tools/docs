@@ -8,6 +8,7 @@ const warmServer = require('./lib/warm-server')
 const port = Number(process.env.PORT) || 4000
 const app = express()
 
+require('./security')(app)
 require('./middleware')(app)
 
 // prevent the app from starting up during tests
