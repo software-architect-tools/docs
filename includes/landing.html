@@ -15,6 +15,7 @@
   </section>
 
   <!-- Explore by product -->
+  {% if disableLandingProducts %}
   <section class="container-xl pb-lg-4 my-8 px-3 px-md-6">
     <div class="">
       <h2 class="text-mono f5 text-normal text-gray text-md-center mb-4">{% data ui.homepage.explore_by_product %}</h2>
@@ -33,7 +34,9 @@
       </div>
     </div>
   </section>
-
+  {% endif %}
+  
   <div class="px-3 px-md-6 container-xl">
+  <br>  
   {% include featured-links %}
   </div>

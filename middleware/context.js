@@ -28,6 +28,7 @@ module.exports = async function contextualize (req, res, next) {
   // define each context property explicitly for code-search friendliness
   // e.g. searches for "req.context.page" will include results from this file
   req.context.currentLanguage = req.language
+  req.context.disableLandingProducts = process.env.DISABLE_LANDING_PRODUTCS
   req.context.currentVersion = getVersionStringFromPath(req.path)
   req.context.currentProduct = getProductStringFromPath(req.path)
   req.context.allProducts = allProducts
